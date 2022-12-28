@@ -1,10 +1,8 @@
 /* Types collection */
-import React from 'react';
+export type Props = {
+  children: React.ReactNode;
+};
 
 export type CardProps = {
   time: String;
-};
-
-export type Props = {
-  children: React.ReactNode;
 };
