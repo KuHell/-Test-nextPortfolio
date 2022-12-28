@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from 'react';
 
 interface CartProps {
   time: String;
 }
 
 const Card = ({ time }: CartProps) => {
-  console.log("time: ", time.time);
+  console.log('time:: ', time);
   return (
     <>
       <h1>Card</h1>
-      <div>time: {time.time}</div>
+      <div>time: {time}</div>
     </>
   );
 };

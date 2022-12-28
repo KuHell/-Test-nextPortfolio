@@ -1,6 +1,6 @@
-import React from "react";
-import Card from "../components/Card";
-import { GetStaticProps } from "next";
+import React from 'react';
+import Card from '../components/Card';
+import { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -8,13 +8,11 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home = (time: string) => {
-  console.log(">>>>", time);
+const Home = (props: { time: string }) => {
   return (
     <div>
-      <h1>Home</h1>
-      <Card time={{ time: time }} />
-      {/* <Card Json={{ key1: time }} /> */}
+      <h1 className='bg-green-500'>Home</h1>
+      <Card time={props.time} />
     </div>
   );
 };
