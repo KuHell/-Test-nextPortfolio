@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home = (props: { time: string }) => {
   return (
     <div>
-      <h1 className='bg-green-500'>Home</h1>
       <Card time={props.time} />
     </div>
   );

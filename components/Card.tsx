@@ -1,10 +1,7 @@
 import React from 'react';
+import { CardProps } from '../types/index';
 
-interface CartProps {
-  time: String;
-}
-
-const Card = ({ time }: CartProps) => {
+const Card = ({ time }: CardProps) => {
   console.log('time:: ', time);
   return (
     <>
