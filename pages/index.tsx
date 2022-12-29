@@ -14,7 +14,12 @@ const Home = (props: { time: string }) => {
       <h1 className='m-20 text-7xl'>
         Freelance product designer, based in Poland
       </h1>
-      <Card time={props.time} />
+      <div className='grid grid-cols-2 grid-rows-2 gap-8 place-items-center'>
+        <Card time={props.time} />
+        <Card time={props.time} />
+        <Card time={props.time} />
+        <Card time={props.time} />
+      </div>
     </div>
   );
 };

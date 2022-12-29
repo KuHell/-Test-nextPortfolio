@@ -6,7 +6,7 @@ const Card = ({ time }: CardProps) => {
   console.log('time:: ', time);
   return (
     <>
-      <div className='max-w-xl bg-white rounded-md max-h-2xl'>
+      <div className='min-w-[43rem] bg-white rounded-md min-h-[35rem]'>
         <Link href='#'>
           <img></img>
           <p>Project Name</p>
