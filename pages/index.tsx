@@ -10,17 +10,21 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home = (props: { time: string }) => {
   return (
-    <div className=''>
-      <h1 className='m-20 text-7xl'>
-        Freelance product designer, based in Poland
-      </h1>
-      <div className='grid grid-cols-2 grid-rows-1 gap-y-16 place-items-center'>
-        <Card time={props.time} />
-        <Card time={props.time} />
-        <Card time={props.time} />
-        <Card time={props.time} />
+    <>
+      <div>
+        <h1 className='m-32 text-7xl'>
+          Freelance product designer, based in Poland
+        </h1>
       </div>
-    </div>
+      <div>
+        <div className='grid grid-cols-2 grid-rows-1 gap-y-16 place-items-center'>
+          <Card time={props.time} />
+          <Card time={props.time} />
+          <Card time={props.time} />
+          <Card time={props.time} />
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -7,7 +7,7 @@ const HeaderBar = () => {
     <div className='flex flex-row flex-wrap content-center justify-between h-[150px] text-xl sticky top-0 bg-black'>
       <div className='mx-[100px]'>
         <Link
-          className='hover:tracking-[0.2px] hover:opacity-50 hover:hover:duration-500'
+          className='hover:tracking-[0.2px] hover:opacity-50 hover:duration-500'
           href='/'
         >
           Main Logo Section
