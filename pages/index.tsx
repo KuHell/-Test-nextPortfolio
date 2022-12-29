@@ -11,7 +11,9 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home = (props: { time: string }) => {
   return (
     <div className='text-center'>
-      <h1 className='m-20 text-7xl'>짧막하게 자기소개</h1>
+      <h1 className='m-20 text-7xl'>
+        Freelance product designer, based in Poland
+      </h1>
       <Card time={props.time} />
     </div>
   );

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 const HeaderBar = () => {
+  const navTitle = ['Project', 'About', 'Contact'];
+
   return (
     <div className='flex flex-row flex-wrap content-center justify-between h-[150px] text-xl sticky top-0'>
       <div className='mx-[100px]'>
@@ -13,30 +15,16 @@ const HeaderBar = () => {
       </div>
       <nav>
         <ul className='flex flex-row gap-10 list-none mx-[100px]'>
-          <li className='float-left'>
-            <Link
-              className='hover:opacity-50 hover:duration-500'
-              href='/project'
-            >
-              Project
-            </Link>
-          </li>
-          <li className='float-left'>
-            <Link
-              className='hover:opacity-50 hover:hover:duration-500'
-              href='/about'
-            >
-              About
-            </Link>
-          </li>
-          <li className='float-left'>
-            <Link
-              className='hover:opacity-50 hover:hover:duration-500'
-              href='/contact'
-            >
-              Contact
-            </Link>
-          </li>
+          {navTitle.map((item) => (
+            <li className='float-left'>
+              <Link
+                className='hover:opacity-50 hover:duration-500'
+                href={`/` + item.toLowerCase()}
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
