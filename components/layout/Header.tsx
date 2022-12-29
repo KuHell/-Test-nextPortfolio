@@ -4,7 +4,7 @@ const HeaderBar = () => {
   const navTitle = ['Project', 'About', 'Contact'];
 
   return (
-    <div className='flex flex-row flex-wrap content-center justify-between h-[150px] text-xl sticky top-0 bg-black'>
+    <div className='flex flex-row flex-wrap content-center justify-between h-[150px] text-xl sticky top-0 bg-black z-10'>
       <div className='mx-[100px]'>
         <Link
           className='hover:tracking-[0.2px] hover:opacity-50 hover:duration-500'
