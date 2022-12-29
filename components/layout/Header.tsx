@@ -16,7 +16,7 @@ const HeaderBar = () => {
       <nav>
         <ul className='flex flex-row gap-10 list-none mx-[100px]'>
           {navTitle.map((item) => (
-            <li className='float-left'>
+            <li className='float-left' key={item}>
               <Link
                 className='hover:opacity-50 hover:duration-500'
                 href={`/` + item.toLowerCase()}

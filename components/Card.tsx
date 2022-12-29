@@ -3,14 +3,20 @@ import { CardProps } from '../types/index';
 import Link from 'next/link';
 
 const Card = ({ time }: CardProps) => {
-  console.log('time:: ', time);
   return (
     <>
       <div className='min-w-[43rem] bg-white rounded-md min-h-[35rem]'>
         <Link href='#'>
-          <img></img>
-          <p>Project Name</p>
-          <p>Datte</p>
+          <div className='max-h-[70%]'>
+            <img
+              src='https://upload.wikimedia.org/wikipedia/commons/b/ba/Seoul_Tower_%284394893276%29.jpg'
+              alt='project_img'
+            />
+          </div>
+          <div>
+            <h1 className='text-black'>Project Name</h1>
+            <p className='text-black'>Datte</p>
+          </div>
         </Link>
       </div>
     </>
