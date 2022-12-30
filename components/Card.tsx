@@ -5,7 +5,7 @@ import { ProjectInfoProps } from '../types';
 const Card = (projectInfo: ProjectInfoProps) => {
   return (
     <>
-      <div className='max-w-[40rem] max-h-[35rem]'>
+      <div className='max-h-[35rem]'>
         <Link className='group' href='#'>
           <div className='max-h-[450px] overflow-hidden '>
             <img
@@ -16,10 +16,10 @@ const Card = (projectInfo: ProjectInfoProps) => {
           </div>
           <div>
             <h1 className='my-4 text-2xl font-bold group-hover:opacity-50 group-hover:duration-500'>
-              Project Name
+              {projectInfo.title}
             </h1>
             <p className='text-xl group-hover:opacity-50 group-hover:duration-500'>
-              Dec 30, 2022
+              {projectInfo.date}
             </p>
           </div>
         </Link>

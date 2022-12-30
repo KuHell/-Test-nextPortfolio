@@ -14,12 +14,12 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   return (
     <>
       <div>
-        <h1 className='m-32 text-7xl'>
+        <h1 className='my-32 text-7xl'>
           Freelance product designer, based in Poland
         </h1>
       </div>
       <div>
-        <div className='grid grid-cols-2 grid-rows-1 gap-y-16 place-items-center'>
+        <div className='grid grid-cols-2 gap-16 place-items-center'>
           {projectInfo.map((info) => (
             <Card
               key={info.title}
