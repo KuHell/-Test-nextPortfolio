@@ -1,8 +1,12 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 const about = () => {
   const route = useRouter();
+  const animatedItem = useScrollFadeIn(1, 0);
+  const animatedItem2 = useScrollFadeIn(1, 0);
+  const animatedItem3 = useScrollFadeIn(1, 0);
 
   const contactHandler = () => {
     route.push('/contact');
@@ -22,7 +26,7 @@ const about = () => {
         />
       </div>
       <div className='flex flex-col items-center'>
-        <div className='flex flex-row flex-1 my-40'>
+        <div {...animatedItem} className='flex flex-row flex-1 my-40'>
           <h3 className='text-4xl w-[800px]'>About me</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
@@ -32,7 +36,7 @@ const about = () => {
             lobortis ex.
           </p>
         </div>
-        <div className='flex flex-row flex-1 my-40'>
+        <div {...animatedItem2} className='flex flex-row flex-1 my-40'>
           <h3 className='text-4xl w-[800px]'>Services</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
@@ -42,13 +46,13 @@ const about = () => {
             lobortis ex.
           </p>
         </div>
-        <div className='my-32 text-center'>
+        <div {...animatedItem3} className='my-32 text-center'>
           <p className='text-5xl'>Let's talk about the next big thinkg</p>
           <button
             className='px-[25px] py-[20px] my-12 text-xl text-black bg-white  hover:bg-zinc-400 hover:hover:duration-500'
             onClick={contactHandler}
           >
-            React Out
+            Reach Out
           </button>
         </div>
       </div>

@@ -3,9 +3,11 @@ import Card from '../components/Card';
 import { GetStaticProps, InferGetServerSidePropsType } from 'next';
 import { useState, useEffect } from 'react';
 import { ProjectInfoProps } from '../types';
+import useScrollFadeIn from '../hooks/useScrollFadeIn';
 
 const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const [projectInfo, setProjectInfo] = useState<ProjectInfoProps[]>([]);
+  const animatedItem = useScrollFadeIn('up', 1, 0);
 
   useEffect(() => {
     setProjectInfo(props.projectInfo);
