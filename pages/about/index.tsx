@@ -4,9 +4,9 @@ import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const about = () => {
   const route = useRouter();
-  const animatedItem = useScrollFadeIn(1, 0);
-  const animatedItem2 = useScrollFadeIn(1, 0);
-  const animatedItem3 = useScrollFadeIn(1, 0);
+  const animatedAbout = useScrollFadeIn(1, 0);
+  const animatedServices = useScrollFadeIn(1, 0);
+  const animatedContact = useScrollFadeIn(1, 0);
 
   const about = {
     title:
@@ -33,16 +33,28 @@ const about = () => {
           className='w-full max-h-[640px] object-cover object-center'
         />
       </div>
-      <div className='flex flex-col items-center'>
-        <div {...animatedItem} className='flex flex-row flex-1 my-40'>
-          <h3 className='text-4xl w-[800px]'>{about.aboutMe}</h3>
-          <p>{about.aboutMeContent}</p>
+      <div className='flex flex-col Abouts-center'>
+        <div {...animatedAbout} className='flex flex-row flex-1 my-40'>
+          <h3 className='text-4xl w-[800px]'>About me</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
+            sapien sit amet magna fermentum, ut auctor mi tempus. Pellentesque
+            id massa lacus. Vestibulum pellentesque malesuada enim, eget gravida
+            elit finibus sit amet. In ipsum elit, vulputate eu arcu quis, dictum
+            lobortis ex.
+          </p>
         </div>
-        <div {...animatedItem2} className='flex flex-row flex-1 my-40'>
-          <h3 className='text-4xl w-[800px]'>{about.services}</h3>
-          <p>{about.servicesContent}</p>
+        <div {...animatedServices} className='flex flex-row flex-1 my-40'>
+          <h3 className='text-4xl w-[800px]'>Services</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
+            sapien sit amet magna fermentum, ut auctor mi tempus. Pellentesque
+            id massa lacus. Vestibulum pellentesque malesuada enim, eget gravida
+            elit finibus sit amet. In ipsum elit, vulputate eu arcu quis, dictum
+            lobortis ex.
+          </p>
         </div>
-        <div {...animatedItem3} className='my-32 text-center'>
+        <div {...animatedContact} className='my-32 text-center'>
           <p className='text-5xl'>Let's talk about the next big thinkg</p>
           <button
             className='px-[25px] py-[20px] my-12 text-xl text-black bg-white  hover:bg-zinc-400 hover:hover:duration-500'
