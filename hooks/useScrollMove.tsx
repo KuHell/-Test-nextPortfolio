@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-const useScrollMove = () => {
-  const element = useRef<HTMLElement>();
+const useScrollMove = (element) => {
+  // const element = useRef<HTMLElement>(null);
   const onMoveToElement = () => {
     element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };

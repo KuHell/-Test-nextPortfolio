@@ -3,9 +3,12 @@ import Card from '../components/Card';
 import { GetStaticProps, InferGetServerSidePropsType } from 'next';
 import { useState, useEffect } from 'react';
 import { ProjectInfoProps } from '../types';
-import element from '../hooks/useScrollMove';
+import useScrollMove from '../hooks/useScrollMove';
 
 const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
+  const element = useRef<HTMLElement>(null);
+  useScrollMove(element);
+
   const [projectInfo, setProjectInfo] = useState<ProjectInfoProps[]>([]);
 
   useEffect(() => {
@@ -15,6 +18,7 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   return (
     <>
       <div>
+        {/* <div onClick={ref.onMoveToElement}>test</div> */}
         <h1 className='my-32 text-7xl'>
           Freelance product designer, based in Poland
         </h1>
