@@ -8,7 +8,7 @@ const useScrollFadeIn = (duration = 1, delay = 0) => {
   };
 
   const onScroll = useCallback(
-    ([entry]) => {
+    ([entry]: any) => {
       console.log('entry:: ', entry);
       const { current } = element;
       console.log('current:: ', current);
@@ -25,7 +25,7 @@ const useScrollFadeIn = (duration = 1, delay = 0) => {
   );
 
   useEffect(() => {
-    let observer;
+    let observer: IntersectionObserver;
 
     if (element.current) {
       observer = new IntersectionObserver(onScroll, { threshold: 0.7 });

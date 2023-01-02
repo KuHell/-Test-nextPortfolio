@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useRef } from 'react';
+import onMoveToElement from '../../hooks/useScrollMove';
 
 const HeaderBar = () => {
   const navLink = ['Project', 'About', 'Contact'];
@@ -17,12 +19,22 @@ const HeaderBar = () => {
         <ul className='flex flex-row gap-10 list-none'>
           {navLink.map((link) => (
             <li className='float-left' key={link}>
-              <Link
-                className='hover:opacity-50 hover:duration-500'
-                href={`/` + link.toLowerCase()}
-              >
-                {link}
-              </Link>
+              {link === 'Project' ? (
+                <Link
+                  className='hover:opacity-50 hover:duration-500'
+                  href={`#project-list`}
+                  onClick={onMoveToElement}
+                >
+                  {link}
+                </Link>
+              ) : (
+                <Link
+                  className='hover:opacity-50 hover:duration-500'
+                  href={`/` + link.toLowerCase()}
+                >
+                  {link}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

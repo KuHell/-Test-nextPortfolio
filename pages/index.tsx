@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Card from '../components/Card';
 import { GetStaticProps, InferGetServerSidePropsType } from 'next';
 import { useState, useEffect } from 'react';
 import { ProjectInfoProps } from '../types';
-import useScrollFadeIn from '../hooks/useScrollFadeIn';
+import element from '../hooks/useScrollMove';
 
 const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const [projectInfo, setProjectInfo] = useState<ProjectInfoProps[]>([]);
-  const animatedItem = useScrollFadeIn('up', 1, 0);
 
   useEffect(() => {
     setProjectInfo(props.projectInfo);
@@ -21,7 +20,10 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
         </h1>
       </div>
       <div>
-        <div className='grid grid-cols-2 gap-16 place-items-center'>
+        <div
+          ref={element}
+          className='grid grid-cols-2 gap-16 place-items-center'
+        >
           {projectInfo.map((info) => (
             <Card
               key={info.title}
