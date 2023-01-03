@@ -1,16 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import { ProjectInfoProps } from "../types";
+import { CardProps } from "../types";
+import Image from "next/image";
 
-const Card = (projectInfo: ProjectInfoProps) => {
+const Card = (projectInfo: CardProps) => {
   const test = () => {
     console.log("Card Click");
-    console.log(projectInfo);
+    console.log(">>>>>>>>>>>>>>", projectInfo.label);
   };
   return (
-    <Link href="/project-page/1" onClick={test}>
+    // <Link href={`/project/${projectInfo.label}`} onClick={test}>
+    <>
       <div className="max-h-[35rem]">
-        <Link className="group" href="#">
+        <Link className="group" href={`/project/${projectInfo.label}`}>
           <div className="max-h-[450px] overflow-hidden ">
             <img
               className="group-hover:scale-105 group-hover:duration-500"
@@ -28,7 +30,7 @@ const Card = (projectInfo: ProjectInfoProps) => {
           </div>
         </Link>
       </div>
-    </Link>
+    </>
   );
 };
 

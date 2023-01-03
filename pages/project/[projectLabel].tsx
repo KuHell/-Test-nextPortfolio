@@ -1,6 +1,6 @@
 import React from "react";
 
-const Project = () => {
+const Project = (props: any) => {
   return (
     <div>
       <h1 className="my-32 text-5xl">Project Title1</h1>

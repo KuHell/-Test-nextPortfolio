@@ -4,7 +4,17 @@ export type Props = {
 };
 
 export type ProjectInfoProps = {
-  image: string;
-  title: string;
-  date: string;
+  id: number
+  title: string
+  image: string[]
+  content: string[]
+  date: string
+  label: string
 };
+
+export type CardProps = {
+  date: string;
+  image: string[];
+  label: string;
+  title: string;
+}
