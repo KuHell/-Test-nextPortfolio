@@ -13,7 +13,7 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   }, [props]);
 
   return (
-    <>
+    <div className='animate-fade-in-up'>
       <div>
         {/* <div onClick={ref.onMoveToElement}>test</div> */}
         <h1 className='my-32 text-7xl'>
@@ -32,7 +32,7 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
