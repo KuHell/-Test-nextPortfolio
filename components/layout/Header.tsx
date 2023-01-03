@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import useScrollMove from '../../hooks/useScrollMove';
 
 const HeaderBar = () => {
   const navLink = ['Project', 'About', 'Contact'];
@@ -21,8 +20,7 @@ const HeaderBar = () => {
               {link === 'Project' ? (
                 <Link
                   className='hover:opacity-50 hover:duration-500'
-                  href={`#project-list`}
-                  onClick={useScrollMove().onMoveToElement}
+                  href={'#project-list'}
                 >
                   {link}
                 </Link>

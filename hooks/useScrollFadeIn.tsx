@@ -8,7 +8,7 @@ const useScrollFadeIn = (duration = 1, delay = 0) => {
   };
 
   const onScroll = useCallback(
-    ([entry]: any) => {
+    ([entry]: IntersectionObserverEntry[]) => {
       console.log('entry:: ', entry);
       const { current } = element;
       console.log('current:: ', current);
