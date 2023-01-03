@@ -36,7 +36,7 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   );
 };
 
-// SSR
+// SSG
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {

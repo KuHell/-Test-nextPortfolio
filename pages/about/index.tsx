@@ -24,7 +24,7 @@ const about = () => {
   };
 
   return (
-    <div>
+    <div className='animate-fade-in-up'>
       <h1 className='my-32 text-5xl'>{about.title}</h1>
       <div className='overflow-hidden'>
         <img
