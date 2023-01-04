@@ -1,11 +1,14 @@
-import React from "react";
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const Project = (props: any) => {
+  const router = useRouter();
+  const { projectLabel } = router.query;
   return (
     <div>
-      <h1 className="my-32 text-5xl">Project Title1</h1>
-      <div className="flex flex-row items-start justify-between">
-        <h2 className="text-3xl min-w-[28rem]">UI/UX, Illustration</h2>
+      <h1 className='my-32 text-5xl'>Project Title1 {projectLabel}</h1>
+      <div className='flex flex-row items-start justify-between'>
+        <h2 className='text-3xl min-w-[28rem]'>UI/UX, Illustration</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
           sapien sit amet magna fermentum, ut auctor mi tempus. Pellentesque id
