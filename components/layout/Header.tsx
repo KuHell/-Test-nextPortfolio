@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const HeaderBar = () => {
-  const navLink = ['Project', 'About', 'Contact'];
+  const navLink = ['Projects', 'About', 'Contact'];
   const route = useRouter();
 
   return (
@@ -19,7 +19,7 @@ const HeaderBar = () => {
         <ul className='flex flex-row gap-10 list-none'>
           {navLink.map((link) => (
             <li className='float-left' key={link}>
-              {link === 'Project' ? (
+              {link === 'Projects' ? (
                 <Link href='/' as={`/#project-list`}>
                   {link}
                 </Link>
