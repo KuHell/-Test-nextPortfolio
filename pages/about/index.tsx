@@ -34,7 +34,7 @@ const about = () => {
         />
       </div>
       <div className='flex flex-col Abouts-center'>
-        <div {...animatedAbout} className='flex flex-row flex-1 my-40'>
+        <div {...animatedAbout} className='flex flex-row flex-1 my-52'>
           <h3 className='text-4xl w-[800px]'>About me</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat
