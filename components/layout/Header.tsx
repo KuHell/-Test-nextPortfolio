@@ -1,9 +1,15 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useContext, useEffect } from 'react';
+import ClickState from '../../store/clickState';
 
 const HeaderBar = () => {
   const navLink = ['Projects', 'About', 'Contact'];
-  const route = useRouter();
+
+  const [isClick, setIsClick] = useContext(ClickState);
+
+  const onChangeClickHandler = () => {
+    setIsClick(true);
+  };
 
   return (
     <div className='flex flex-row flex-wrap content-center justify-between h-[150px] text-xl sticky top-0 bg-black z-10'>
@@ -20,7 +26,11 @@ const HeaderBar = () => {
           {navLink.map((link) => (
             <li className='float-left' key={link}>
               {link === 'Projects' ? (
-                <Link href='/' as={`/#project-list`}>
+                <Link
+                  href='/'
+                  as={`/#project-list`}
+                  onClick={onChangeClickHandler}
+                >
                   {link}
                 </Link>
               ) : (

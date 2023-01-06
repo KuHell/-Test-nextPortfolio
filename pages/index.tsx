@@ -1,15 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import Card from '../components/Card';
 import { GetStaticProps, InferGetServerSidePropsType } from 'next';
 import { useState, useEffect } from 'react';
 import { ProjectInfoProps } from '../types';
 import projects from '../projectInfo.json';
 import { useRouter } from 'next/router';
+import ClickState from '../store/clickState';
 
 const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const [projectInfo, setProjectInfo] = useState<ProjectInfoProps[]>([]);
-  const element = useRef<HTMLDivElement | undefined>();
+  const element = useRef<any>();
   const route = useRouter();
+  const isClick = useContext(ClickState);
 
   const query = route.asPath.substring(2);
 
@@ -20,13 +22,13 @@ const Home = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
 
   /* query가 project-list로 들어왔을 때 실행되는 hook */
   useEffect(() => {
-    if (query === 'project-list') {
+    if (isClick) {
       /* project list가 있는 곳으로 실행시키는 함수 */
       setTimeout(() => {
         element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 200);
     }
-  }, [query]);
+  }, [isClick]);
 
   return (
     <div className='animate-fade-in-up'>
